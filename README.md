@@ -118,6 +118,20 @@ spec:
         - mountPath: "/usr/share/nginx/html"
           name: task-pv-storage
 ```
+Connect to my Tanzu cluster 
+```
+Jump onto k8 cluster 
+
+alias l2540='kubectl vsphere login --server 192.168.5.40 \
+                --vsphere-username administrator@vsphere.local \
+                --managed-cluster-namespace namespace1000 \
+                --managed-cluster-name tkg-newberlin \
+                --insecure-skip-tls-verify'
+l2540
+kubectl config use-context tkg-newberlin
+
+```
+
 Apply the 3 yaml files
 ```
 kubectl apply -f ./nfspv.yaml
