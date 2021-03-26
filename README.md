@@ -36,7 +36,7 @@ Test the mount from another server (this is the same mount command the POD will 
 mkdir /ttmp/a
 mount -t nfs -o hard,nfsvers=4.1 192.168.3.4:/mnt/myexport /tmp/a
 ```
-To setup the CSI NFS Provisioner we followed the instructions on this page https://github.com/kubernetes-csi/csi-driver-nfs
+To setup the CSI NFS Provisioner (Inspiration came from here: https://github.com/kubernetes-csi/csi-driver-nfs )
 ```
 curl -skSL https://raw.githubusercontent.com/kubernetes-csi/csi-driver-nfs/master/deploy/install-driver.sh | bash -s master --
 ```
@@ -173,6 +173,8 @@ Fri Mar 26 12:27:12 UTC 2021
 Fri Mar 26 12:58:20 UTC 2021
 root@task1-pv-pod:/usr/share/nginx/html# 
 ```
+Reference document: https://docs.vmware.com/en/VMware-Telco-Cloud-Platform---5G-Edition/1.0/telco-cloud-platform-5G-edition-reference-architecture-guide-10/GUID-0D85BBFA-37F4-49C3-8943-13F9B0BA278C.html
+
 
 
 
