@@ -33,7 +33,7 @@ Export list for 192.168.3.4:
 
 Test the mount from another server (this is the same mount command the POD will do)
 ```
-mkdir /ttmp/a
+mkdir /tmp/a
 mount -t nfs -o hard,nfsvers=4.1 192.168.3.4:/mnt/myexport /tmp/a
 ```
 To setup the CSI NFS Provisioner (Inspiration came from here: https://github.com/kubernetes-csi/csi-driver-nfs )
